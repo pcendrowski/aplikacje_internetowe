@@ -1,0 +1,323 @@
+body {
+	margin: 0;
+	padding: 0;
+
+}
+header,nav,footer,article,aside,section {
+	display: block;
+
+}
+
+.clearfix {
+	clear: both;
+}
+
+header {
+	width: 100%;
+	top: 0;
+	position: fixed;
+	overflow: hidden;
+	background-color: #333;
+	padding: 0px;
+	z-index: 1;
+}
+	
+header h1, article h2, footer h1, article span, article p, figcaption{
+	text-align: center;
+	font-family: 'Advent Pro', sans-serif;
+	color: white;
+	
+}
+
+div.logo {
+	display: block;
+	margin-left: 5%;
+	float: left;
+	padding: 10px;
+	width: 55%;
+}
+
+div.logo img {
+	width: 32%;
+	height: auto;
+
+}
+
+div.logo h1{
+	float: right;
+	text-align: center;
+	font-size: 3vw;
+	padding: 10px;
+	
+}
+
+div.author_info {
+	float: right;
+	margin-top: 2.5%;
+	margin-right: 3%;
+	background-color: #4f92ff;
+	border-bottom: medium solid red;
+	padding: 5px;
+	border-radius: 25px 0px 25px 0px;
+	box-shadow: 5px 5px 10px;
+	width: 30%;
+}
+
+div.author_info h1 {
+	font-size: 1.5vw;
+}
+
+div.navbar ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+div.navbar li {
+  font-family: 'Advent Pro';
+  font-size: 1.2vw;
+  line-height: 250%;
+  height: 250%;
+  display: inline-block;
+  width: 12%;
+  
+}
+ 
+div.navbar a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+div.navbar a:hover {
+  background-color: #a01e10;
+}
+ 
+div.navbar a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+section.main {
+	display: block;
+	margin-top: 10%;
+	background-color: #797572;
+    background-image: 
+        linear-gradient(-173deg, rgba(255,255,255,0.20) 0%, #000000 100%),
+        linear-gradient(72deg, rgba(255,255,255,0.25) 25%, rgba(0,0,0,0.25) 100%),
+        radial-gradient(47% 102%, rgba(255,255,255,0.50) 0%, rgba(21,24,32,0.60) 120%);
+    background-blend-mode: multiply;
+	background-attachment: fixed;
+}
+
+article {
+	color: white;
+	width: auto;
+	overflow: hidden;
+}
+
+article div.title h2{
+	text-align: center;
+	font-size: 5vw;
+}
+
+article div.article_container {
+	padding: 50px;
+	overflow: hidden;
+}
+
+div.car_image {
+	margin-top: 3%;
+	float: left;
+	width: 40%;
+	overflow: hidden;
+}
+
+div.car_image img {
+	border-radius: 15px;
+	width: 100%;
+	height: auto;
+}
+
+
+div.car_description {
+	float: right;
+	width: 60%;
+	overflow: hidden;
+
+}
+
+div.car_description p.title {
+	text-align: center;
+	font-size: 3vw;
+	font-weight: bold;
+	text-decoration: underline;
+	
+
+}
+
+div.car_description p.description {
+	text-align: justify;
+	font-size: 2vw;
+
+}
+
+div.description {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	list-style-position:inside;
+}
+
+div.formularz {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	list-style-position: inside;
+	font-size: 2vw;
+	border-radius: 5px;
+    padding: 20px;
+}
+
+div.formularz {
+	font-family: 'Advent Pro';
+
+}
+
+input[type=text], [type=email], [type=tel], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+	width: 99%;
+	height: 15em;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	font-family: 'Advent Pro';
+	font-size: 1.2vw;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+article#cennik div.title table#cennik_tabela, span{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 2vw;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+	border: medium solid white;
+}
+
+th {
+	text-align: center;
+	background-color: #4CAF50;
+	width: 50%;
+	border: 2px solid white;
+}
+
+th.neutral {
+	text-align: center;
+	background-color: #006F81;
+}
+
+th.title_cat {
+	background-color: #ce000b;
+	
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+	width: 50%;
+	border: 2px solid white;
+}
+
+td.center_cena {
+	text-align: center;
+}
+
+tr:nth-child(even){
+	background-color: #333;
+	}
+
+div.service_image {
+	margin-top: 35px;
+	margin-left: 50px;
+	float: left;
+	width: 40%;
+	overflow: hidden;
+}
+
+div.service_image img {
+	border-radius: 15px;
+	width: 80%;
+	height: auto;
+}
+
+p.title {
+	font-weight: bold;
+}
+
+div.description ol {
+	font-family: 'Advent Pro';
+	font-size: 2vw;
+}
+ 
+video {
+	width: 90%;
+	height: auto;
+	z-index: -1;
+}	
+
+div.video {
+	float: left;
+	width: 40%;
+	overflow: hidden;
+}
+
+div.o_nas_opis p {
+	float: left;
+	width: 60%;
+	font-size: 1.5vw;
+	text-align: justify;
+	overflow: hidden;
+}
+
+
+footer {
+	position: static;
+	width: auto;
+	padding: 5px;
+	bottom: 0;
+	background-color: black;
+	text-align: center;
+	font-size: 1vw;
+
+}

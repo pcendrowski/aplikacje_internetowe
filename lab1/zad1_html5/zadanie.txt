@@ -1,0 +1,14 @@
+Przygotowaæ waliduj¹c¹ siê stronê w standardzie HTML5.
+Stopieñ trudnoœci (du¿a ró¿norodnoœæ u¿ytych elementów HTML) ma wp³yw na ocenê. 
+
+Strona powinna zawieraæ menu (minimum 6 pozycji) z odwo³aniami do jej fragmentów. Nie mo¿e byæ podstron. 
+Tematyka utworzonej strony: zainteresowania autora strony. (Oznacz Ÿród³o !!!) 
+
+Uwagi:
+
+Proszê u¿ywaæ nowych znaczników z HTML5.
+Proszê siê pochwaliæ, ¿e potrafi¹ Pañstwo umieœciæ obrazek, filmik, stworzyæ hiper³¹cze, tabele, ró¿ne rodzaje list, formularz, ...
+Nale¿y przes³aæ archiwum zip (< 5MB) z rozwi¹zaniem zadania.
+Wymagana nazwa pliku z archiwum zad1_html5_nazwisko_nrindeksu.zip .
+Termin oddania: do najbli¿szych laboratoriów.
+£amanie praw autorskich lub stwierdzony plagiat = -5 pkt.
