@@ -92,7 +92,60 @@
                             <input type="submit">
                         </p>    
                 </div>
-
+                
+                <div id="wyniki_sonda">
+                    <h1>WYNIKI:</h1>
+                    <ol>
+                        <li>
+                            <p class="question">Dostawcy internetu stacjonarnego:<p>
+                                Orange:
+                                <br>
+                                 UPC:
+                                <br>
+                                Multimedia:
+                                <br>
+                                Inny (lokalny dostawca):
+                                <br>
+                                Nie posiadam stacjonarnego łącza:
+                        </li>
+                        <li>
+                                <p class="question">Operator internetu mobilnego:<p>
+                                T-mobile:
+                                <br>
+                                Orange:
+                                <br>
+                                Plus:
+                                <br>
+                                Play:
+                                <br>
+                                Żaden z powyższych:
+                        </li>
+                        
+                        <li>
+                                <p class="question">Dostęp do sieci z aglomeracji:<p>
+                                Miasto:
+                                <br>
+                                Wieś:
+                        </li>
+                        <li>
+                                <p class="question">Czy jesteś w zasięgu sieci światłowodowej lub technologii LTE ?:<p>
+                                Tak:
+                                <br>
+                                Nie:
+                                <br>
+                                Nie wiem:
+                        </li>
+                        <li>
+                                <p class="question">Czy jesteś zadowolony z jakości działania swojego internetu ?:<p>
+                                Tak:
+                                <br>
+                                Nie:
+                                <br>
+                                Trudno powiedzieć (+/-):
+                        </li>
+                    </ol>   
+                </div>
+                
                 <div id="author_info">
                         <span>
                             <u>To jest tylko przykładowa strona internetowa!</u>

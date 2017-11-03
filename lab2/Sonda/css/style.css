@@ -40,6 +40,15 @@ div#sonda {
    border-radius: 2%;
 }
 
+div#wyniki_sonda {
+   padding: 1%;
+   background-color: white;
+   width: 55%;
+   margin: auto;
+   margin-top: 2%;
+   border-radius: 2%;
+}
+
 div#sonda p.question {
     text-align: left;
 }
@@ -64,7 +73,7 @@ div#author_info {
 	padding: 5px;
 	width: 80%;
         font-size: 25px;
-        background-color: white;
+        background-color: yellow;
         border-radius: 25%;
         color: red;
         display: block;
