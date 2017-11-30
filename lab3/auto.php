@@ -33,15 +33,11 @@
             </nav> 
                    
             <div class="name_table">
-                 <h1>Wypożyczalnie</h1>
+                 <h1>Samochody</h1>
             </div>
 	</header>
-    
-    
 		
 		<section class="main">
-                    
-                    
 			
                     <?php
                         require('wypozyczalnia.php');

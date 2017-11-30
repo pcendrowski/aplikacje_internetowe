@@ -26,41 +26,31 @@
                         <li><a href="index.php">Wypożyczalnie</a></li>
                         <li><a href="auto.php">Samochody</a></li>
                         <li><a href="#">Klienci</a></li>
-                        <li><a href="diagram_erd.php">Diagram ERD</a></li>
+                        <li><a href="#">Diagram ERD</a></li>
 
                     </ul>
                 </div>
             </nav> 
                    
             <div class="name_table">
-                 <h1>Wypożyczalnie</h1>
+                 <h1>Diagram ERD</h1>
             </div>
 	</header>
-    
-    
 		
 		<section class="main">
                     
+                    <div class="diagram_erd">
+                        <img src="baza_danych/diagram_ERD_wypozyczalnia.png">
+                        
+                        <h1>
+                            <u>Opis:</u>
+                            <p>Wypożyczalnia posiada kilka marek samochodów do wypożyczenia.<br>
+                               Klient może być klientem w wielu wypożyczalniach, a wypożyczalnia może mieć wielu klientów.
+                            </p>
+                            
+                        </h1>
+                    </div>
                     
-			
-                    <?php
-                        require('wypozyczalnia.php');
-                        require('config.php');
-
-                        $baza = new Baza($szbd,$host,$dbname,$port,$login,$haslo);
-
-                        if( isset($_GET['delete']) )      
-                          $baza->delete($_GET['delete']);
-                        elseif( isset($_POST['update']) ) 
-                          $baza->update($_POST['nazwa'],$_POST['ulica'],$_POST['nr_budynku'],$_POST['miasto'],$_POST['telefon'],$_POST['update']);
-                        elseif( isset($_POST['insert']) ) 
-                          $baza->insert($_POST['nazwa'],$_POST['ulica'],$_POST['nr_budynku'],$_POST['miasto'],$_POST['telefon']);
-                        elseif( isset($_GET['edit']) )    
-                          $baza->select_update($_GET['edit']);
-                        else 
-                          $baza->select_insert();
-
-                    ?>
                                       
 		</section>
 
