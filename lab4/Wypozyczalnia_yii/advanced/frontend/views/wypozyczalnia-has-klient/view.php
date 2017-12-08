@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\WypozyczalniaHasKlient */
 
-$this->title = $model->idWypozyczalnia;
+$this->title = 'Klient wypożyczalni:' ;
 $this->params['breadcrumbs'][] = ['label' => 'Klient wypożyczalni', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -28,8 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'idWypozyczalnia:text:Wypożyczalnia',
-            'idKlient:text:Klient',
+            'idWypozyczalnia0.Nazwa:text:Wypożyczalnia',
+            'idKlient0.Imie:text:Imię', 'idKlient0.Nazwisko',
         ],
     ]) ?>
 

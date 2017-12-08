@@ -4,10 +4,13 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\Auto;
+use common\models\Wypozyczalnia;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+
+use yii\helpers\ArrayHelper;
 
 /**
  * AutoController implements the CRUD actions for Auto model.
@@ -64,12 +67,19 @@ class AutoController extends Controller
     public function actionCreate()
     {
         $model = new Auto();
+        
+        $wypozyczalnie = Wypozyczalnia::find()
+                ->orderBy('Nazwa')
+                ->all();
+        
+        $wypozyczalnie = ArrayHelper::map($wypozyczalnie, 'idWypozyczalnia', 'Nazwa');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idAuto]);
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'wypozyczalnie' => $wypozyczalnie,
             ]);
         }
     }
@@ -83,12 +93,19 @@ class AutoController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        
+        $wypozyczalnie = Wypozyczalnia::find()
+                ->orderBy('Nazwa')
+                ->all();
+        
+        $wypozyczalnie = ArrayHelper::map($wypozyczalnie, 'idWypozyczalnia', 'Nazwa');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idAuto]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'wypozyczalnie' => $wypozyczalnie,
             ]);
         }
     }

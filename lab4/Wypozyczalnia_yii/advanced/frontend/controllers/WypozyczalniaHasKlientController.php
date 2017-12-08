@@ -4,10 +4,14 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\WypozyczalniaHasKlient;
+use common\models\Wypozyczalnia;
+use common\models\Klient;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+
+use yii\helpers\ArrayHelper;
 
 /**
  * WypozyczalniaHasKlientController implements the CRUD actions for WypozyczalniaHasKlient model.
@@ -65,12 +69,26 @@ class WypozyczalniaHasKlientController extends Controller
     public function actionCreate()
     {
         $model = new WypozyczalniaHasKlient();
+        
+        $wypozyczalnie = Wypozyczalnia::find()
+                ->orderBy('Nazwa')
+                ->all();
+        
+        $klienci = Klient::find()
+                ->orderBy('Imie')
+                ->all();
+        
+        $wypozyczalnie = ArrayHelper::map($wypozyczalnie, 'idWypozyczalnia', 'Nazwa');
+        $klienci = ArrayHelper::map($klienci, 'idKlient', 'Imie');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'idWypozyczalnia' => $model->idWypozyczalnia, 'idKlient' => $model->idKlient]);
         } else {
+            
             return $this->render('create', [
                 'model' => $model,
+                'wypozyczalnie' => $wypozyczalnie,
+                'klienci' => $klienci,
             ]);
         }
     }
@@ -85,12 +103,25 @@ class WypozyczalniaHasKlientController extends Controller
     public function actionUpdate($idWypozyczalnia, $idKlient)
     {
         $model = $this->findModel($idWypozyczalnia, $idKlient);
+        
+        $wypozyczalnie = Wypozyczalnia::find()
+                ->orderBy('Nazwa')
+                ->all();
+        
+        $klienci = Klient::find()
+                ->orderBy('Imie')
+                ->all();
+        
+        $wypozyczalnie = ArrayHelper::map($wypozyczalnie, 'idWypozyczalnia', 'Nazwa');
+        $klienci = ArrayHelper::map($klienci, 'idKlient', 'Imie');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'idWypozyczalnia' => $model->idWypozyczalnia, 'idKlient' => $model->idKlient]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'wypozyczalnie' => $wypozyczalnie,
+                'klienci' => $klienci,
             ]);
         }
     }

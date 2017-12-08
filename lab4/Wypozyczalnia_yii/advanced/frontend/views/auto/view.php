@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'Moc',
             'Rodzaj_paliwa',
             'Przebieg',
-            'idWypozyczalnia',
+            'idWypozyczalnia0.Nazwa:text:Wypożyczalnia',
         ],
     ]) ?>
 

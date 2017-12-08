@@ -42,8 +42,6 @@ AppAsset::register($this);
         ['label' => 'Samochody', 'url' => ['/auto/index']],
         ['label' => 'Baza klientów', 'url' => ['/klient/index']],
         ['label' => 'Klienci wg. wypożyczalni', 'url' => ['/wypozyczalnia-has-klient/index']],
-        ['label' => 'Diagram ERD', 'url' => ['//index']],
-        ['label' => 'Informacje o projekcie', 'url' => ['/site/contact']],
     ];
     
     echo Nav::widget([

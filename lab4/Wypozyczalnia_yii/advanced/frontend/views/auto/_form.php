@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Przebieg')->textInput() ?>
     
-    <?= $form->field($model, 'idWypozyczalnia')->textInput()->label('Wypożyczalnia') ?>
+    <?= $form->field($model, 'idWypozyczalnia')->dropDownList($wypozyczalnie)->label('Wypożyczalnia') ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Dodaj' : 'Zmień', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
