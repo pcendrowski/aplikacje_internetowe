@@ -38,9 +38,9 @@ CREATE TABLE Auto (
 
 
 CREATE TABLE Wypozyczalnia_has_klient (
+  idWypozyczalnia_has_klient INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   idWypozyczalnia INT NOT NULL,
   idKlient INT NOT NULL,
-  PRIMARY KEY(idWypozyczalnia, idKlient),
   CONSTRAINT `Wypozyczalnia_has_klient_Wypozyczalnia_fk`
         FOREIGN KEY idWypozyczalnia_fk (idWypozyczalnia) REFERENCES Wypozyczalnia (idWypozyczalnia)
         ON DELETE CASCADE ON UPDATE CASCADE,

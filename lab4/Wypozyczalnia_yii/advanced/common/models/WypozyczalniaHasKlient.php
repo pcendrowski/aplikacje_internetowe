@@ -7,6 +7,7 @@ use Yii;
 /**
  * This is the model class for table "wypozyczalnia_has_klient".
  *
+ * @property integer $idWypozyczalnia_has_klient
  * @property integer $idWypozyczalnia
  * @property integer $idKlient
  *
@@ -42,6 +43,7 @@ class WypozyczalniaHasKlient extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+            'idWypozyczalnia_has_klient' => 'Id Wypozyczalnia Has Klient',
             'idWypozyczalnia' => 'Id Wypozyczalnia',
             'idKlient' => 'Id Klient',
         ];

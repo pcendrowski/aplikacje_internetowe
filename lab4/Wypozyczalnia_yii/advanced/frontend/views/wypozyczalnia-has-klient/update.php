@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\WypozyczalniaHasKlient */
 
-$this->title = 'Zmień przypisanie klienta do wypożyczalni:';
+$this->title = 'Zmień przypisanie klienta do wypożyczalni';
 $this->params['breadcrumbs'][] = ['label' => 'Zmień przypisanie klienta do wypożyczalni', 'url' => ['index']];
-//$this->params['breadcrumbs'][] = ['label' => $model->idWypozyczalnia, 'url' => ['view', 'idWypozyczalnia' => $model->idWypozyczalnia, 'idKlient' => $model->idKlient]];
+//$this->params['breadcrumbs'][] = ['label' => $model->idWypozyczalnia_has_klient, 'url' => ['view', 'id' => $model->idWypozyczalnia_has_klient]];
 $this->params['breadcrumbs'][] = 'Zmień';
 ?>
 <div class="wypozyczalnia-has-klient-update">

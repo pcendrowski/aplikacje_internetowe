@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'idWypozyczalnia')->dropDownList($wypozyczalnie)->label('Wypożyczalnia') ?>
+    <?= $form->field($model, 'idWypozyczalnia')->dropDownList($wypozyczalnie)->label('Wypożyczalnia')  ?>
 
     <?= $form->field($model, 'idKlient')->dropDownList($klienci)->label('Klient') ?>
 

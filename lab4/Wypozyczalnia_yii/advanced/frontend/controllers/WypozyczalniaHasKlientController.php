@@ -13,6 +13,7 @@ use yii\filters\VerbFilter;
 
 use yii\helpers\ArrayHelper;
 
+
 /**
  * WypozyczalniaHasKlientController implements the CRUD actions for WypozyczalniaHasKlient model.
  */
@@ -50,14 +51,13 @@ class WypozyczalniaHasKlientController extends Controller
 
     /**
      * Displays a single WypozyczalniaHasKlient model.
-     * @param integer $idWypozyczalnia
-     * @param integer $idKlient
+     * @param integer $id
      * @return mixed
      */
-    public function actionView($idWypozyczalnia, $idKlient)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($idWypozyczalnia, $idKlient),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -70,7 +70,7 @@ class WypozyczalniaHasKlientController extends Controller
     {
         $model = new WypozyczalniaHasKlient();
         
-        $wypozyczalnie = Wypozyczalnia::find()
+         $wypozyczalnie = Wypozyczalnia::find()
                 ->orderBy('Nazwa')
                 ->all();
         
@@ -79,12 +79,11 @@ class WypozyczalniaHasKlientController extends Controller
                 ->all();
         
         $wypozyczalnie = ArrayHelper::map($wypozyczalnie, 'idWypozyczalnia', 'Nazwa');
-        $klienci = ArrayHelper::map($klienci, 'idKlient', 'Imie');
+        $klienci = ArrayHelper::map($klienci, 'idKlient', 'Imie', 'Nazwisko');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'idWypozyczalnia' => $model->idWypozyczalnia, 'idKlient' => $model->idKlient]);
+            return $this->redirect(['view', 'id' => $model->idWypozyczalnia_has_klient]);
         } else {
-            
             return $this->render('create', [
                 'model' => $model,
                 'wypozyczalnie' => $wypozyczalnie,
@@ -96,13 +95,12 @@ class WypozyczalniaHasKlientController extends Controller
     /**
      * Updates an existing WypozyczalniaHasKlient model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $idWypozyczalnia
-     * @param integer $idKlient
+     * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($idWypozyczalnia, $idKlient)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($idWypozyczalnia, $idKlient);
+        $model = $this->findModel($id);
         
         $wypozyczalnie = Wypozyczalnia::find()
                 ->orderBy('Nazwa')
@@ -115,8 +113,9 @@ class WypozyczalniaHasKlientController extends Controller
         $wypozyczalnie = ArrayHelper::map($wypozyczalnie, 'idWypozyczalnia', 'Nazwa');
         $klienci = ArrayHelper::map($klienci, 'idKlient', 'Imie');
 
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'idWypozyczalnia' => $model->idWypozyczalnia, 'idKlient' => $model->idKlient]);
+            return $this->redirect(['view', 'id' => $model->idWypozyczalnia_has_klient]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -129,13 +128,12 @@ class WypozyczalniaHasKlientController extends Controller
     /**
      * Deletes an existing WypozyczalniaHasKlient model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $idWypozyczalnia
-     * @param integer $idKlient
+     * @param integer $id
      * @return mixed
      */
-    public function actionDelete($idWypozyczalnia, $idKlient)
+    public function actionDelete($id)
     {
-        $this->findModel($idWypozyczalnia, $idKlient)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -143,14 +141,13 @@ class WypozyczalniaHasKlientController extends Controller
     /**
      * Finds the WypozyczalniaHasKlient model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $idWypozyczalnia
-     * @param integer $idKlient
+     * @param integer $id
      * @return WypozyczalniaHasKlient the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($idWypozyczalnia, $idKlient)
+    protected function findModel($id)
     {
-        if (($model = WypozyczalniaHasKlient::findOne(['idWypozyczalnia' => $idWypozyczalnia, 'idKlient' => $idKlient])) !== null) {
+        if (($model = WypozyczalniaHasKlient::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
