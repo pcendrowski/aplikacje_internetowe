@@ -1,9 +1,0 @@
-Proszê sformatowaæ wygl¹d strony z zadania 1.
-
-Nale¿y u¿yæ zewnêtrznego arkusza stylów w standardzie CSS3.
-Utworzony arkusz stylów powinien siê walidowaæ.
-W razie potrzeby mo¿na modyfikowaæ Ÿród³o strony z zadania 1, jednak ca³e formatowanie dokumentu powinno siê znaleŸæ w zewnêtrznym arkuszu stylów.
-Nie mo¿na skorzystaæ z gotowego szablonu strony znalezionego w Internecie.
-Efekt koñcowy ma du¿y wp³yw na ocenê.
-Nale¿y przes³aæ archiwum zip (< 5MB) z rozwi¹zaniem zadania.
-Wymagana nazwa pliku z archiwum zad2_css3_nazwisko_nrindeksu.zip .
