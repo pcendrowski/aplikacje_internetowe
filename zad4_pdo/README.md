@@ -4,7 +4,7 @@
 
 1. Wymyśl temat, wykonaj diagram ERD i utwórz skrypt SQL generujący bazę danych zawierającą co najmniej 1 związek 1:N i co najmniej 1 związek N:M (pamiętaj o tabeli pośredniczącej), np: 
 
-![Schemat ERD bazy danych](https://raw.githubusercontent.com/pcendrowski/aplikacje_internetowe/master/lab3/baza_danych/schemat_bazy_zad.png)
+![Schemat ERD bazy danych](https://raw.githubusercontent.com/pcendrowski/aplikacje_internetowe/master/zad4_pdo/baza_danych/schemat_bazy_zad.png)
 
 Pamiętaj o autoinkrementacji i doborze ograniczeń! zadbaj o to, aby pojawiały się różne typy kolumn.
 
